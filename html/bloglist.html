@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='../CSS/bloglist.css' rel='stylesheet' type='text/css'>    
+    <link href='../CSS/header.css' rel='stylesheet' type='text/css'>
+    <!-- <link href='..\css\font.css' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- This is the header Section -->
+    <div id="main-div-container">
+        <div class="header">
+            <button id="signUp" class="topButtons"  onclick="openSignUpButton()" value="Sign Up">Sign Up</button>
+            <button id="signIn" class="topButtons"  onclick="openSignIn()" value="Sign In">Sign in</button>
+        </div>
+        <div id="logo-container"></div>
+            <a href="../index.html" id="logo" class="logo-title">ScriBBler</a>
+            <p id="tagline">Explore, Imagine, Create</p>
+        </div>
+    </div>
+           
+ <!-- This is for the Modal -->
+    <div id="signInModal" class="modal">
+        <form class="modal-content" action="/action_page.php">
+            <span onclick="onCloseModalClicked()" class="close_signIn" title="Close Modal">&times;</span>
+            <div class="container">
+                <h1>Welcome Back</h1>
+                <hr>
+                <label for="Username">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="Username" required>
+
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <div class="clearfix">
+                    <button type="submit" class="signinbtn">Sign In</button>
+                </div>
+            </div>
+            <div id="signUpPrompt" class="signUpForm">Not a member?
+                <span id="" class="signUp" onclick="openSignUp()">Sign Up</span>
+            </div>
+        </form>
+    </div>
+
+    <div id="signUpModal" class="modal">
+        <div class="modal-content-sigup">
+            <form class="modal-content-sigUp" action="/action_page.php">
+                <div class="container-signUp">
+                    <span onclick="onCloseModalClicked()" class="close" title="Close Modal">&times;</span>
+                    <h1>Get Started</h1>
+                    <hr>
+                    <label for="Fullname">
+                        <b>Full Name</b>
+                    </label>
+                    <input type="text" placeholder="Enter First Name" name="Fullname" required>
+                    <label for="Username">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="Username" required>
+                    <label for="psw">
+                        <b>Password</b>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label for="psw-repeat">
+                        <b>Confirm Password</b>
+                    </label>
+                    <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Sign Up</button>
+                        
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="allPostsContainer">
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Srishti Gupta</p>
+        </div>
+        <div class="post-content">
+            <button onclick="onDeletePost()" class="deletePost"><i class="fa fa-trash"></i></button>
+            <p class="post-title">‘let’ me be a ‘const’(ant), not a ‘var’(iable)! </p>
+            <p class="post-desc">
+		Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.
+		</p>
+            <span class="post-more" onclick="fullPost()">...</span>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Colby Fayock</p>
+        </div>
+        <div class="post-content">
+                <button onclick="onDeletePost()" class="deletePost"><i class="fa fa-trash"></i></button>
+                <p class="post-title">What is linting and how can it save you time?</p>
+                <p class="post-desc"> 
+			One of the biggest challenges in software development is time. It’s something we can’t easily get more of, but linting can help us make the most out of the time we have.	
+ </p>
+            <span class="post-more" onclick="fullPost()">...</span>
+        </div>
+    </div>
+
+
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Yazeed Bzadough</p>
+        </div>
+        <div class="post-content">
+                <button onclick="onDeletePost()" class="deletePost"><i class="fa fa-trash"></i></button>
+                <p class="post-title">How to Get More Views on Your Tech Blog</p>
+                <p class="post-desc">If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry.</p>
+            <span class="post-more" onclick="fullPost()">...</span>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-left">
+            <p class="post-username">Cedd Burge</p>
+        </div>
+        <div class="post-content">
+                <button onclick="onDeletePost()" class="deletePost"><i class="fa fa-trash"></i></button>
+                <p class="post-title">How to write easily describable code</p>
+                <p class="post-desc">When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which
+                    leads to confusion when discussing the code.</p>
+            <span class="post-more" onclick="fullPost()">...</span>
+        </div>
+    </div>
+    <div class="post">
+            <div class="post-left">
+                <p class="post-username">Srishti Gupta</p>
+            </div>
+            <div class="post-content">
+                    <button onclick="onDeletePost()" class="deletePost"><i class="fa fa-trash"></i></button>
+                    <p class="post-title">Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+                    <p class="post-desc">Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve created a module
+                        named xyz.</p>
+                <span class="post-more" onclick="fullPost()">...</span>
+            </div>
+        </div>
+        <div id="deletePostPrompt" class="deletePrompt">
+                <form class="deleteContent" action="/action_page.php">
+                    
+                    <div>
+                        <h1 class="deleteContainer">Are you sure you want to delete this post?</h1>                                               
+                        <button type="submit" class="deleteButton">Yes</button>
+                        <button type="button" class="CancelDeleteButton" onclick="onCloseDeleteClicked()">No</button>
+                        </div>
+               </form>
+            </div>
+</div>
+    <script src="../JS/bloglist.js">  </script>
+    <script src="../JS/header.js">  </script>
+</body>
